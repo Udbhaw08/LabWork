@@ -1,21 +1,23 @@
-#26/08/25
 def chatbot():
-    print(" Hello! I'm your friendly chatbot. Type 'exit' to end the chat.")
+    print("Chatbot: Hello! I am a simple Python chatbot. What is your name?")
+    name = input("You: ")
+    print(f"Chatbot: Nice to meet you, {name}! How can I help you today?")
     
     while True:
-            user_input = input("You: ").strip().lower()
-            
-            if user_input == "exit":
-                print("Bot: Goodbye! Have a great day ")
-                break
-            elif user_input == "":
-                print("Bot: Hmm, you didn’t say anything. Try again!")
-            elif "hello" in user_input or "hi" in user_input:
-                print("Bot: Hey there! How can I help you today?")
-            elif "how are you" in user_input:
-                print("Bot: I'm just code, but I'm running smoothly! What about you?")
-            elif "joke" in user_input:
-                print("Bot: Why don’t scientists trust atoms? Because they make up everything! ")
-            else:
-                print("Bot: I’m not sure how to respond to that. Try asking something else!")
+        user_input = input(f"{name}: ").lower()
+
+        if "bye" in user_input:
+            print(f"Chatbot: Goodbye, {name}! Have a great day.")
+            break
+        elif "hello" in user_input or "hi" in user_input:
+            print(f"Chatbot: Hello there, {name}!")
+        elif "how are you" in user_input:
+            print("Chatbot: I'm just a program, but I'm doing great! Thanks for asking.")
+        elif "your name" in user_input:
+            print("Chatbot: You can call me PyBot.")
+        elif "weather" in user_input:
+            print("Chatbot: I can't check the weather, but I hope it's nice where you are!")
+        else:
+            print("Chatbot: I'm not sure how to respond. You can ask me my name or how I am.")
+
 chatbot()

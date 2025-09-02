@@ -1,10 +1,21 @@
-n = int(input("Enter a number: "))
-if n < 2:
-    print("Not prime")
-else:
-    for i in range(2, n):
-        if n % i == 0:
-            print("Not prime")
-            break
+def prime_checker():
+    print("Name : Udbhaw Anand")
+    print("Roll No : 2302901520186\n")
+    
+    n = int(input("Enter a positive integer: "))
+    is_prime = True
+
+    if n <= 1:
+        is_prime = False
     else:
-        print("Prime")
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                is_prime = False
+                break
+    
+    if is_prime:
+        print(f"{n} is a prime number.")
+    else:
+        print(f"{n} is not a prime number.")
+
+prime_checker()
